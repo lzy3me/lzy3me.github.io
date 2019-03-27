@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Com.NeoExtreamZero.Blog</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://flukejessada.github.io/"/>
+  <updated>2019-03-27T18:14:43.473Z</updated>
+  <id>http://flukejessada.github.io/</id>
+  
+  <author>
+    <name>Fluke Jessada</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Test</title>
+    <link href="http://flukejessada.github.io/2019/03/16/hello-world/"/>
+    <id>http://flukejessada.github.io/2019/03/16/hello-world/</id>
+    <published>2019-03-15T17:57:03.000Z</published>
+    <updated>2019-03-27T18:14:43.473Z</updated>
+    
+    <content type="html"><![CDATA[<p>Motivation and passion college student working towards a B.C. in Computer Science at Dhonburi Rajabhat University. Enthusiastic of learning to improve skill and experience in mobile application development.</p><h5 id="Education"><a href="#Education" class="headerlink" title="Education"></a>Education</h5><p>Dhonburi Rajabhat University (DRU)<br>B.Sc in Computer Science - 2016<br>3.1 GPA</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Motivation and passion college student working towards a B.C. in Computer Science at Dhonburi Rajabhat University. Enthusiastic of learni
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
