@@ -43,3 +43,30 @@ a.footer:hover {
 a.footer:active {
     color: #ffb300;
 }
+
+body, html {
+    height: 100%;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.banner-area {
+    background-image: url(../images/me-banner.jpg);
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner-area .overlay-bg {
+    background: rgba(255, 183, 77, 0.3);
+}
