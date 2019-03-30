@@ -1,0 +1,45 @@
+/*  Create by Fluke.NXZ 
+    http://github.com/flukejessada */
+
+.center {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}
+.header {
+    background-color: #ffecb3;
+    padding-top: 90px;
+}
+a.header:link {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+a.header:visited {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+a.header:hover {
+    color: rgb(88, 69, 15);
+    text-decoration: none;
+}
+a.header:active {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+a.footer:link {
+    font-size: 2em;
+    color: #ffb300;
+}
+a.footer:visited {
+    color: #ffb300;
+}
+
+a.footer:hover {
+    color: rgb(192, 143, 78);
+    text-decoration: none;
+}
+a.footer:active {
+    color: #ffb300;
+}
