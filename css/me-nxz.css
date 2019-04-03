@@ -30,7 +30,7 @@ body, html {
     bottom: 0;
 }
 .banner-area {
-    background-image: url(../images/me-banner.jpg);
+    background-image: url(../images/me-banner.webp);
     height: 100%; 
     background-position: center;
     background-repeat: no-repeat;
