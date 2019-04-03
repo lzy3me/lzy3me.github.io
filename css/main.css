@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css?family=Athiti|Dosis|Rubik");
+body {
+  height: 100vh;
+  margin: 0;
+  color: white;
+  font-family: 'Athiti', 'Dosis', 'Rubik', sans-serif;
+}
+
+p {
+  font-family: 'Rubik', 'Athiti', sans-serif;
+  font-size: 1.2em;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Dosis', 'Athiti', sans-serif;
+  font-size: 3em;
+  margin: 0;
+}
+
+section {
+  height: 40vh;
+}
+
+section.full {
+  height: 100vh;
+}
+
+.paddown {
+  padding-bottom: 40vh;
+}
+
+section.head {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 160, 0, 0.45)), to(rgba(255, 160, 0, 0.45))), url(../images/abort-me.webp) no-repeat center fixed;
+  background: linear-gradient(rgba(255, 160, 0, 0.45), rgba(255, 160, 0, 0.45)), url(../images/abort-me.webp) no-repeat center fixed;
+  background-size: cover;
+  padding-top: 15em;
+  height: calc(100vh - 15em);
+  text-align: center;
+}
+
+.icon-scroll,
+.icon-scroll:before {
+  position: relative;
+  left: 48.5%;
+}
+
+.icon-scroll {
+  position: relative;
+  top: 0;
+  left: 48.5%;
+  width: 30px;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.icon-scroll:before {
+  position: absolute;
+  top: 10px;
+  left: 47%;
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-left: -2px;
+  background-color: #fff;
+  border-radius: 100%;
+  -webkit-animation: sdb10 2s infinite;
+  animation: sdb10 2s infinite;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@-webkit-keyframes sdb10 {
+  0% {
+    -webkit-transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes sdb10 {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translate(0, 20px);
+            transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+section.subhead {
+  background: #fff9c4;
+  text-align: center;
+}
+
+/* * * * * *  Footer Zone  * * * * * */
+.social-container {
+  position: relative;
+  display: inline-block;
+  width: 164px;
+  height: 36px;
+  -webkit-perspective: 300px;
+          perspective: 300px;
+  font-size: 20px;
+  margin: 8px;
+}
+
+.social-container .social-cube {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all 0.333s;
+  transition: all 0.333s;
+  -webkit-transform: translateZ(-18px);
+          transform: translateZ(-18px);
+}
+
+.social-container .social-cube .front, .social-container .social-cube .bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  -webkit-transition: background 0.333s;
+  transition: background 0.333s;
+}
+
+.social-container .social-cube .front {
+  -webkit-transform: rotateX(0deg) translateZ(18px);
+          transform: rotateX(0deg) translateZ(18px);
+}
+
+.social-container .social-cube .bottom {
+  -webkit-transform: rotateX(-90deg) translateZ(18px);
+          transform: rotateX(-90deg) translateZ(18px);
+}
+
+.social-container:hover .social-cube {
+  -webkit-transform: translateZ(-18px) rotateX(90deg);
+          transform: translateZ(-18px) rotateX(90deg);
+}
+
+.social-container.twitter .social-cube .front, .social-container.twitter .social-cube .back {
+  background: #4099FF;
+}
+
+.social-container.twitter .social-cube .bottom {
+  background: #0d7eff;
+}
+
+.social-container.twitter:hover .social-cube .bottom {
+  background: #4099FF;
+}
+
+.social-container.twitter:hover .social-cube .front {
+  background: #73b4ff;
+}
+
+.social-container.facebook .social-cube .front, .social-container.facebook .social-cube .back {
+  background: #3b5998;
+}
+
+.social-container.facebook .social-cube .bottom {
+  background: #2d4373;
+}
+
+.social-container.facebook:hover .social-cube .bottom {
+  background: #3b5998;
+}
+
+.social-container.facebook:hover .social-cube .front {
+  background: #4c70ba;
+}
+
+.social-container.github .social-cube .front, .social-container.github .social-cube .back {
+  background: #767676;
+}
+
+.social-container.github .social-cube .bottom {
+  background: #5d5d5d;
+}
+
+.social-container.github:hover .social-cube .bottom {
+  background: #767676;
+}
+
+.social-container.github:hover .social-cube .front {
+  background: #909090;
+}
+
+footer {
+  height: 20vh;
+}
+
+footer.myfoot {
+  padding-top: 3em;
+  background: #ffcc80;
+  text-align: center;
+}
+
+footer.myfoot p {
+  color: #767676;
+}
+/*# sourceMappingURL=main.css.map */

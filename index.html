@@ -2,44 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="FlukeJessada">
-    <meta name="keywords" content="profile">
-    <meta name="description" content="FlukeJessada's Personal Website">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
-    <link rel="stylesheet" href="../css/me-nxz.css">
-    <script src="https://unpkg.com/scrollreveal"></script>
     <title>FlukeJessada</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <header>
-    </header>
-    <section class="banner-area">
-        <div class="overlay overlay-bg"></div>
-        <div class="container">
-            <div class="centered">
-                <h1 class="text-white">Fluke Jessada</h1>
-                <p class="text-white">I'm Developer and I want a Coffee.</p>
-            </div>
-        </div>
+    <section class="full head">
+        <h1>Fluke Jessada</h1>
+        <p>Software Developer</p>
+        <div class="paddown"></div>
     </section>
-    <footer class="jumbotron" style="margin-bottom:0; background-color:#ffecb3;">
-        <div class="text-right">
-            <a href="https://github.com/flukejessada" target="_blank" class="footer">
-                <i class="fab fa-github-alt"></i>
-            </a>
-            &ThickSpace;
-            <a href="https://twitter.com/FlukeJessada" target="_blank" class="footer">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <p>Made with ❤️ by FlukeJessada</p>
-        </div> 
+    <section class="subhead">
+
+    </section>
+    <footer class="myfoot">
+        <!-- Twitter -->
+        <a href="https://twitter.com/FlukeJessada" class="social-container twitter">
+            <div class="social-cube">
+                <div class="front">
+                    Twitter
+                </div>
+                <div class="bottom">
+                    @FlukeJessada
+                </div>
+            </div>
+          </a>
+          <!-- Facebook -->
+          <a href="https://fb.me/IamNamix" class="social-container facebook">
+            <div class="social-cube">
+                <div class="front">
+                    Facebook
+                </div>
+                <div class="bottom">
+                    fb.me/IamNamix
+                </div>
+            </div>
+          </a>
+          <br>
+          <!-- Github -->
+          <a href="https://github.com/FlukeJessada" class="social-container github">
+            <div class="social-cube">
+                <div class="front">
+                    Github
+                </div>
+                <div class="bottom">
+                    @Crazy_J
+                </div>
+            </div>
+          </a>
+          <br>
+          <p>Made with ❤️ by FlukeJessada</p>
     </footer>
 </body>
+<script src="node_modules/lax.js/lib/lax.min.js" ></script>
+<script>
+    window.onload = function() {
+        lax.setup() // init
+
+        const updateLax = () => {
+            lax.update(window.scrollY)
+            window.requestAnimationFrame(updateLax)
+        }
+        window.requestAnimationFrame(updateLax)
+    }
+    window.onscroll = function() {
+
+    }
+</script>
 </html>
