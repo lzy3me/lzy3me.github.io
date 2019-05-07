@@ -11,7 +11,9 @@
 
 $desktop: 840px;
 @mixin desktop {
-
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
 }
 
 $color: (
@@ -56,6 +58,9 @@ body {
         margin: 0; padding: 0;
         display: flex;
         z-index: -1;
+        @include desktop {
+            clip-path: polygon(0 0, 80% 0, 60% 100%, 0% 100%);
+        }
     }
 
     #deb {
@@ -79,11 +84,26 @@ body {
         margin: 50px auto 0 auto;
         padding: 15px;
         transition-duration: 250ms;
+        &:hover {
+            background-color: color(btn-hover);
+            transition: background-color 250ms linear;
+        }
     }
 
-    #btn:hover {
-        background-color: color(btn-hover);
-        transition-duration: 250ms;
+    
+
+    .desktop-hide {
+        visibility: visible;
+        @include desktop {
+            visibility: hidden;
+        }
+    }
+
+    .desktop-show {
+        visibility: hidden;
+        @include desktop {
+            visibility: visible;
+        }
     }
 
     #bg {
@@ -104,6 +124,11 @@ body {
         animation-name: bg-change;
         animation-duration: 5s;
         animation-delay: 2s;
+
+        @include desktop {
+            clip-path: polygon(0 0, 80% 0, 60% 100%, 0% 100%);
+            background-position: right;
+        }
     }
 
     @keyframes bg-change {
@@ -113,9 +138,24 @@ body {
     } 
 }
 
-header {
-    padding: 15px;
-    padding-top: 35vh;
+// header {
+    
+// }
+
+main {
+    @include desktop {
+        display: grid;
+        grid-template-columns: 75% auto;
+        grid-template-areas: 'primary card';
+    }
+
+    section#main {
+        padding: 15px;
+        padding-top: 35vh;
+        @include desktop {
+            padding-top: 25vh;
+        }
+    }
 
     // Animation Zone
     .glitch {
@@ -138,6 +178,9 @@ header {
             left: -2px;
             text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
             animation: glitch-anim2 1s infinite linear alternate-reverse;
+        }
+        @include desktop {
+            font-size: 3em;
         }
     }
     @keyframes glitch-anim {
@@ -166,21 +209,32 @@ header {
             }
         }
     }
-}
+    // End Animation
 
-main {
     #subhead {
         color: color(accent);
         text-align: center;
         font-size: 1.5em;
         font-family: 'Montserrat', sans-serif;
         font-weight: lighter;
+        @include desktop {
+            font-size: 2em;
+        }
     }
 
-    section#wrapper {
+    #wrapper {
         margin: 15px;
+        @include desktop {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         #btn {
             margin: 15px;
+            @include desktop {
+                display: inline-block;
+                padding: 15px 20px * 4;
+            }
         }
     }
 }
