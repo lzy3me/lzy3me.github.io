@@ -1,214 +1,186 @@
-@import url('https://fonts.googleapis.com/css?family=Athiti|Dosis|Rubik');
+@import url('https://fonts.googleapis.com/css?family=Gugi|Kanit|Roboto|Montserrat:300,400');
+
+@mixin glitchCopy { 
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+$desktop: 840px;
+@mixin desktop {
+
+}
+
+$color: (
+    primary: #F6BA53,
+    primary-light: lighten(#F6BA53, 40%),
+    primary-dark: darken(#F6BA53, 40%),
+    accent: #ffffff,
+    dark: #000,
+    btn: rgba(0, 0, 0, .5),
+    btn-hover: rgb(0, 0, 0)
+);
+
+@function color($name) {
+    @return map-get($map: $color, $key: $name);
+}
+
+body, html {
+    padding: 0;
+	margin: 0;
+    width: 100%;
+}
 
 body {
-    height: 100vh;
-    margin: 0;
-    color: white;
-    font-family: 'Athiti', 'Dosis', 'Rubik', sans-serif;
-}
 
-p {
-    font-family: 'Rubik', 'Athiti', sans-serif;
-    font-size: 1.2em;
-    margin: 0;
-}
+    // Font management
+    font-family: 'Roboto', 'Kanit', sans-serif;
 
-h1 {
-    font-family: 'Dosis', 'Athiti', sans-serif;
-    font-size: 3em;
-    margin: 0;
-}
-
-section {
-    height: 40vh;
-}
-
-section.full {
-    height: 100vh;
-}
-
-// only for scroll mouse icon
-.paddown {
-    padding-bottom: 40vh;
-}
-
-section.head {
-    background: 
-        linear-gradient(
-            rgba(255,160,0, 0.45), 
-            rgba(255,160,0, 0.45)
-        ),
-        url(../images/abort-me.webp)
-        no-repeat center fixed;
-    background-size: cover;
-    padding-top: 15em;
-    height: calc(100vh - 15em);
-    text-align: center;
-}
-
-.icon-scroll,
-.icon-scroll:before {
-    position: relative;
-    left: 48.5%;
-}
-
-.icon-scroll {
-    position: relative;
-    top: 0;
-    left: 48.5%;
-    width: 30px;
-    height: 50px;
-    border: 2px solid #fff;
-    border-radius: 50px;
-    box-sizing: border-box;
-}
-
-.icon-scroll:before {
-    position: absolute;
-    top: 10px;
-    left: 47%;
-    content: '';
-    width: 6px;
-    height: 6px;
-    margin-left: -2px;
-    background-color: #fff;
-    border-radius: 100%;
-    -webkit-animation: sdb10 2s infinite;
-    animation: sdb10 2s infinite;
-    box-sizing: border-box;
-}
-
-@-webkit-keyframes sdb10 {
-    0% {
-      -webkit-transform: translate(0, 0);
-      opacity: 0;
+    #th {
+        font-family: 'Kanit', sans-serif;
     }
-    40% {
-      opacity: 1;
+
+    #spec {
+        font-family: 'Gugi', cursive;
     }
-    80% {
-      -webkit-transform: translate(0, 20px);
-      opacity: 0;
+
+    #overlay {
+        clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 80%);
+        background: color(dark);
+        opacity: .5;
+        width: 100%; height: 100%;
+        position: fixed;
+        margin: 0; padding: 0;
+        display: flex;
+        z-index: -1;
     }
-    100% {
-      opacity: 0;
+
+    #deb {
+        background: color(primary);
+        width: 100%; height: 100%;
+        position: fixed;
+        margin: 0; padding: 0;
+        display: flex;
+        z-index: -3;
     }
-}
-@keyframes sdb10 {
-    0% {
-      transform: translate(0, 0);
-      opacity: 0;
+
+    #btn {
+        color: color(primary);
+        border-radius: 15px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        background-color: color(btn);
+        display: block;
+        text-align: center;
+        margin: 50px auto 0 auto;
+        padding: 15px;
+        transition-duration: 250ms;
     }
-    40% {
-      opacity: 1;
+
+    #btn:hover {
+        background-color: color(btn-hover);
+        transition-duration: 250ms;
     }
-    80% {
-      transform: translate(0, 20px);
-      opacity: 0;
+
+    #bg {
+        clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 80%);
+        width: 100%; height: 100%;
+        position: fixed;
+        margin: 0; padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: url(../images/abort-me.webp);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        // background-attachment: fixed;
+        z-index: -2;
+        animation-name: bg-change;
+        animation-duration: 5s;
+        animation-delay: 2s;
     }
-    100% {
-      opacity: 0;
-    }
+
+    @keyframes bg-change {
+        0% {background-image: url(../images/abort-me.webp);}
+        50% {background-image: url(../images/me.webp);}
+        100% {background-image: url(../images/abort-me.webp);}
+    } 
 }
 
-section.subhead {
-    background: #fff9c4;
-    // padding-top: 15em;
-    // height: calc(100vh - 15em);
-    text-align: center;
-}
+header {
+    padding: 15px;
+    padding-top: 35vh;
 
-
-/* * * * * *  Footer Zone  * * * * * */
-// Mixin for easier colors
-@mixin social-container($color) {
-    .social-cube {
-        .front, .back {
-            background: $color;
+    // Animation Zone
+    .glitch {
+        position: relative;
+        text-align: center;
+        font-weight: lighter;
+        color: color(accent);
+        font-size: 2em;
+        letter-spacing: .3em;
+        animation: glitch-skew 1s infinite linear alternate-reverse; 
+        &::before{
+            @include glitchCopy;
+            left: 2px;
+            text-shadow: -2px 0 #ff00c1;
+             clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim 5s infinite linear alternate-reverse;
         }
-        .bottom {
-            background: darken($color, 10%);
+        &::after {
+            @include glitchCopy;
+            left: -2px;
+            text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+            animation: glitch-anim2 1s infinite linear alternate-reverse;
         }
     }
-    &:hover .social-cube {
-        .bottom {
-            background: $color;
+    @keyframes glitch-anim {
+        $steps: 20;
+        @for $i from 0 through $steps {
+            #{percentage($i*(1/$steps))} {
+                clip: rect(random(100)+px, 9999px, random(100)+px, 0);
+                transform: skew((random(100) / 100) + deg);
+            }
         }
-        .front {
-            background: lighten($color, 10%);
+    }
+    @keyframes glitch-anim2 {
+        $steps: 20;
+        @for $i from 0 through $steps {
+            #{percentage($i*(1/$steps))} {
+                clip: rect(random(100)+px, 9999px, random(100)+px, 0);
+                transform: skew((random(100) / 100) + deg);
+            }
+        }
+    }
+    @keyframes glitch-skew {
+        $steps: 10;
+        @for $i from 0 through $steps {
+            #{percentage($i*(1/$steps))} {
+                transform: skew((random(10) - 5) + deg);
+            }
         }
     }
 }
-  
-  // Social container styles
-.social-container {
-    position: relative;
-    display: inline-block;
-    width: 164px;
-    height: 36px;
-    perspective: 300px;
-    font-size: 20px;
-    margin: 8px;
-    .social-cube {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        transform-style: preserve-3d;
-        transition: all 0.333s;
-        transform: translateZ(-18px);
-        .front, .bottom {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            transition: background 0.333s;
-        }
-        .front {
-            transform: rotateX(0deg) translateZ(18px);
-        }
-        .bottom {
-            transform: rotateX(-90deg) translateZ(18px);
-        }
-    }
-    
-    &:hover .social-cube {
-      transform: translateZ(-18px) rotateX(90deg);
-    }
-}
-  
-// Custom colors
-$twitter-blue: #4099FF;
-$facebook-blue: #3b5998;
-$github-gray: #767676;
-  
-.social-container {
-    &.twitter {
-      @include social-container($twitter-blue);
-    }
-    &.facebook {
-      @include social-container($facebook-blue);
-    }
-    &.github {
-      @include social-container($github-gray);
-    }
-}
 
-footer {
-    height: 20vh;
-}
+main {
+    #subhead {
+        color: color(accent);
+        text-align: center;
+        font-size: 1.5em;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: lighter;
+    }
 
-footer.myfoot {
-    padding-top: 3em;
-    background: #ffcc80;
-    text-align: center;
-    p {
-        color: #767676;
+    section#wrapper {
+        margin: 15px;
+        #btn {
+            margin: 15px;
+        }
     }
 }

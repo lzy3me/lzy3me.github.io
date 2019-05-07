@@ -7,68 +7,28 @@
     <title>FlukeJessada</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
 </head>
 <body>
-    <section class="full head">
-        <h1>Fluke Jessada</h1>
-        <p>Software Developer</p>
-        <div class="paddown"></div>
-    </section>
-    <section class="subhead">
-
-    </section>
-    <footer class="myfoot">
-        <!-- Twitter -->
-        <a href="https://twitter.com/FlukeJessada" class="social-container twitter">
-            <div class="social-cube">
-                <div class="front">
-                    Twitter
-                </div>
-                <div class="bottom">
-                    @FlukeJessada
-                </div>
-            </div>
-          </a>
-          <!-- Facebook -->
-          <a href="https://fb.me/IamNamix" class="social-container facebook">
-            <div class="social-cube">
-                <div class="front">
-                    Facebook
-                </div>
-                <div class="bottom">
-                    fb.me/IamNamix
-                </div>
-            </div>
-          </a>
-          <br>
-          <!-- Github -->
-          <a href="https://github.com/FlukeJessada" class="social-container github">
-            <div class="social-cube">
-                <div class="front">
-                    Github
-                </div>
-                <div class="bottom">
-                    @Crazy_J
-                </div>
-            </div>
-          </a>
-          <br>
-          <p>Made with ❤️ by FlukeJessada</p>
-    </footer>
-</body>
-<script src="node_modules/lax.js/lib/lax.min.js" ></script>
-<script>
-    window.onload = function() {
-        lax.setup() // init
-
-        const updateLax = () => {
-            lax.update(window.scrollY)
-            window.requestAnimationFrame(updateLax)
-        }
-        window.requestAnimationFrame(updateLax)
-    }
-    window.onscroll = function() {
-
-    }
-</script>
+    <div id="overlay"></div>
+    <div id="bg"></div>
+    <div id="deb"></div>
+    <header>
+        <h1 id="spec" class="glitch" data-text="FlukeJessada">FlukeJessada</h1>
+    </header>
+    <main>
+        <section>
+            <p id="subhead">
+                I am 
+                <span class="typewrite" data-period="1000" 
+                data-type='[ "LAZY.", "Gamer.", "Creative.", "Developer." ]'></span>
+                <span class="wrap"></span>
+            </p>
+        </section>
+        <section id="wrapper">
+            <div style="padding-top: 30px"></div>
+            <a href="/me" id="btn">See me more</a>
+        </section>
+    </main>
+    <!-- <p>Made with ❤️ by FlukeJessada</p> -->
 </html>
