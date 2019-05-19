@@ -9,9 +9,23 @@
     height: 100%;
 }
 
-$desktop: 840px;
+$Hpxl: 823px;
+$Hipad: 1000px;
+$desktopW: 840px;
 @mixin desktop {
-    @media (min-width: #{$desktop}) {
+    @media (min-width: #{$desktopW}) {
+        @content;
+    }
+}
+
+@mixin highXL {
+    @media (min-height: #{$Hpxl}) {
+        @content;
+    }
+}
+
+@mixin highPad {
+    @media (min-height: #{$Hipad}) {
         @content;
     }
 }
@@ -146,7 +160,7 @@ main {
     @include desktop {
         display: grid;
         grid-template-columns: 75% auto;
-        grid-template-areas: 'primary card';
+        grid-template-areas: 'main nav';
     }
 
     section#main {
@@ -154,6 +168,37 @@ main {
         padding-top: 35vh;
         @include desktop {
             padding-top: 25vh;
+        }
+    }
+
+    section#nav {
+        padding: 15px;
+        padding-top: 15vh;
+        // @include highXL {
+        //     padding-top: 20vh;
+        // }
+        // @include highPad {
+        //     padding-top: 25vh;
+        // }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        li {
+            display: inline-block;
+            font-size: 1.5em;
+            margin: 0 auto 0 auto;
+            a {
+                text-decoration: none;
+                color: color(accent);
+                transition-duration: 250ms;
+                &:hover {
+                    color: color(dark);
+                    transition-duration: 250ms;
+                }
+            }
         }
     }
 
