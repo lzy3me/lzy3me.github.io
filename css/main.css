@@ -184,7 +184,7 @@ main section#main {
 
 main section#nav {
   padding: 15px;
-  padding-top: 15vh;
+  padding-top: 5vh;
 }
 
 main section#nav ul {
@@ -317,6 +317,14 @@ main .glitch {
   color: #ffffff;
   font-size: 2em;
   letter-spacing: .3em;
+}
+
+main .glitch span {
+  font-family: 'Roboto';
+  letter-spacing: .1em;
+  font-size: .5em;
+  margin: 0;
+  padding: 0;
 }
 
 main #subhead {

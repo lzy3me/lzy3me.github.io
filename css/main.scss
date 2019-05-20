@@ -175,7 +175,7 @@ main {
 
     section#nav {
         padding: 15px;
-        padding-top: 15vh;
+        padding-top: 5vh;
         // @include highXL {
         //     padding-top: 20vh;
         // }
@@ -258,6 +258,13 @@ main {
         color: color(accent);
         font-size: 2em;
         letter-spacing: .3em;
+        span {
+            font-family: 'Roboto';
+            letter-spacing: .1em;
+            font-size: .5em;
+            margin: 0;
+            padding: 0;
+        }
     }
 
     #subhead {
