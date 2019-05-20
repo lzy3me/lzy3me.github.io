@@ -9,6 +9,7 @@
     height: 100%;
 }
 
+$total-items: 4;
 $Hpxl: 823px;
 $Hipad: 1000px;
 $desktopW: 840px;
@@ -48,6 +49,7 @@ body, html {
     padding: 0;
 	margin: 0;
     width: 100%;
+    overflow: hidden;
 }
 
 body {
@@ -188,8 +190,14 @@ main {
         }
         li {
             display: inline-block;
-            font-size: 1.5em;
-            margin: 0 auto 0 auto;
+            font-size: 1.2em;
+            margin: 0 20px 0 auto;
+            position: relative;
+            animation-name: og-load;
+            animation-duration: 500ms;
+            animation-fill-mode: both;
+            animation-delay: 500ms;
+            // top: 300px;
             a {
                 text-decoration: none;
                 color: color(accent);
@@ -197,6 +205,46 @@ main {
                 &:hover {
                     color: color(dark);
                     transition-duration: 250ms;
+                }
+            }
+            @include desktop {
+                display: block;
+                font-size: 1.6em;
+                margin: 30px 0 auto 0;
+            }
+        }
+        @for $i from 1 through $total-items {
+            li:nth-child(#{$i}) {
+              animation-delay: .25s * $i;
+            }
+        }
+
+        @keyframes og-load {
+            0% {
+                opacity: 0;
+                top: 100px;
+            }
+            75% {
+                opacity: 0.5;
+                top: 0px;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @include desktop {
+            padding-top: 30vh;
+            @keyframes og-load {
+                0% {
+                    opacity: 0;
+                    left: 100px;
+                }
+                75% {
+                    opacity: 0.5;
+                    left: 0px;
+                }
+                100% {
+                    opacity: 1;
                 }
             }
         }
@@ -210,51 +258,7 @@ main {
         color: color(accent);
         font-size: 2em;
         letter-spacing: .3em;
-        animation: glitch-skew 1s infinite linear alternate-reverse; 
-        &::before{
-            @include glitchCopy;
-            left: 2px;
-            text-shadow: -2px 0 #ff00c1;
-             clip: rect(44px, 450px, 56px, 0);
-            animation: glitch-anim 5s infinite linear alternate-reverse;
-        }
-        &::after {
-            @include glitchCopy;
-            left: -2px;
-            text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
-            animation: glitch-anim2 1s infinite linear alternate-reverse;
-        }
-        @include desktop {
-            font-size: 3em;
-        }
     }
-    @keyframes glitch-anim {
-        $steps: 20;
-        @for $i from 0 through $steps {
-            #{percentage($i*(1/$steps))} {
-                clip: rect(random(100)+px, 9999px, random(100)+px, 0);
-                transform: skew((random(100) / 100) + deg);
-            }
-        }
-    }
-    @keyframes glitch-anim2 {
-        $steps: 20;
-        @for $i from 0 through $steps {
-            #{percentage($i*(1/$steps))} {
-                clip: rect(random(100)+px, 9999px, random(100)+px, 0);
-                transform: skew((random(100) / 100) + deg);
-            }
-        }
-    }
-    @keyframes glitch-skew {
-        $steps: 10;
-        @for $i from 0 through $steps {
-            #{percentage($i*(1/$steps))} {
-                transform: skew((random(10) - 5) + deg);
-            }
-        }
-    }
-    // End Animation
 
     #subhead {
         color: color(accent);
