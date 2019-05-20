@@ -319,7 +319,7 @@ main .glitch {
   letter-spacing: .3em;
 }
 
-main .glitch span {
+main h1 span {
   font-family: 'Roboto';
   letter-spacing: .1em;
   font-size: .5em;
