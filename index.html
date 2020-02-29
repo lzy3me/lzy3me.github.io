@@ -4,53 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Crazy_J</title>
+    <title>LzyDev</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/navbar_lzy.prototype.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <script src="js/main.js"></script>
 </head>
 <body>
-    <div id="overlay"></div>
-    <div id="bg"></div>
-    <div id="deb"></div>
-    <header>
-        
-    </header>
+	<nav class="navbar">
+		<ul class="navbar-nav">
+			<li class="logo">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 300"><defs><style>.cls-1{fill:#1e88e5;}.cls-2{fill:#64b5f6;}.cls-3{fill:#ffb300;}</style></defs><title>LzyDev</title><g id="Y"><polyline class="cls-1" points="300 250 400 250 450 200 450 0 400 0 400 100 350 100 350 0 300 0 300 100 350 150 400 150 400 200 300 200"/></g><g id="Z"><polygon class="cls-2" points="150 50 250 50 300 100 300 150 200 225 225 250 300 250 300 300 200.5 300 150 250 150 200 250 125 225 100 150 100 150 50"/></g><g id="L"><polygon class="cls-3" points="0 0 0 200 50 250 150 250 150 200 50 200.5 50 0 0 0"/></g></svg>
+				<a href="#" class="nav-link">
+					<span class="link-text">LzyDev</span>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><defs><style>.fa-secondary{opacity:.4}</style></defs><path d="M224 273L88.37 409a23.78 23.78 0 0 1-33.8 0L32 386.36a23.94 23.94 0 0 1 0-33.89l96.13-96.37L32 159.73a23.94 23.94 0 0 1 0-33.89l22.44-22.79a23.78 23.78 0 0 1 33.8 0L223.88 239a23.94 23.94 0 0 1 .1 34z" class="fa-secondary"/><path d="M415.89 273L280.34 409a23.77 23.77 0 0 1-33.79 0L224 386.26a23.94 23.94 0 0 1 0-33.89L320.11 256l-96-96.47a23.94 23.94 0 0 1 0-33.89l22.52-22.59a23.77 23.77 0 0 1 33.79 0L416 239a24 24 0 0 1-.11 34z" class="fa-primary"/></svg>
+				</a>
+			</li>
+
+			<li class="nav-item">
+				<a href="#" class="nav-link">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+						<defs>
+							<style>
+								.fa-secondary {
+									opacity: 0.4;
+								}
+							</style>
+						</defs>
+						<path
+							d="M336 463.59V368a16 16 0 0 0-16-16h-64a16 16 0 0 0-16 16v95.71a16 16 0 0 1-15.92 16L112 480a16 16 0 0 1-16-16V300.06l184.39-151.85a12.19 12.19 0 0 1 15.3 0L480 300v164a16 16 0 0 1-16 16l-112-.31a16 16 0 0 1-16-16.1z"
+							class="fa-secondary" />
+						<path
+							d="M573.32 268.35l-25.5 31a12 12 0 0 1-16.9 1.65L295.69 107.21a12.19 12.19 0 0 0-15.3 0L45.17 301a12 12 0 0 1-16.89-1.65l-25.5-31a12 12 0 0 1 1.61-16.89L257.49 43a48 48 0 0 1 61 0L408 116.61V44a12 12 0 0 1 12-12h56a12 12 0 0 1 12 12v138.51l83.6 68.91a12 12 0 0 1 1.72 16.93z"
+							class="fa-primary" />
+					</svg>
+					<span class="link-text">Home</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="https://github.com/FlukeJessada" class="nav-link">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+						<defs>
+							<style>
+								.fa-secondary {
+									opacity: 0.4;
+								}
+							</style>
+						</defs>
+						<path
+							d="M433.63 189.3L258.7 14.37a49.07 49.07 0 0 0-69.39 0L14.37 189.3a49.07 49.07 0 0 0 0 69.39L189.3 433.63a49.07 49.07 0 0 0 69.39 0L433.63 258.7a49.08 49.08 0 0 0 0-69.4zM96 248a24 24 0 1 1 24-24 24 24 0 0 1-24 24zm128 128a24 24 0 1 1 24-24 24 24 0 0 1-24 24zm0-128a24 24 0 1 1 24-24 24 24 0 0 1-24 24zm0-128a24 24 0 1 1 24-24 24 24 0 0 1-24 24zm128 128a24 24 0 1 1 24-24 24 24 0 0 1-24 24z"
+							class="fa-secondary" />
+						<path
+							d="M592 192H473.26a81.07 81.07 0 0 1-17 89.32L320 417.58V464a48 48 0 0 0 48 48h224a48 48 0 0 0 48-48V240a48 48 0 0 0-48-48zM480 376a24 24 0 1 1 24-24 24 24 0 0 1-24 24zM96 200a24 24 0 1 0 24 24 24 24 0 0 0-24-24zm256 48a24 24 0 1 0-24-24 24 24 0 0 0 24 24zm-128 80a24 24 0 1 0 24 24 24 24 0 0 0-24-24zm0-256a24 24 0 1 0 24 24 24 24 0 0 0-24-24zm0 128a24 24 0 1 0 24 24 24 24 0 0 0-24-24z"
+							class="fa-primary" />
+					</svg>
+					<span class="link-text">Project</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link">
+					<span class="faIcon" style="font-size: 3em;">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+							<path
+								d="M256.55 8C116.52 8 8 110.34 8 248.57c0 72.3 29.71 134.78 78.07 177.94 8.35 7.51 6.63 11.86 8.05 58.23A19.92 19.92 0 0 0 122 502.31c52.91-23.3 53.59-25.14 62.56-22.7C337.85 521.8 504 423.7 504 248.57 504 110.34 396.59 8 256.55 8zm149.24 185.13l-73 115.57a37.37 37.37 0 0 1-53.91 9.93l-58.08-43.47a15 15 0 0 0-18 0l-78.37 59.44c-10.46 7.93-24.16-4.6-17.11-15.67l73-115.57a37.36 37.36 0 0 1 53.91-9.93l58.06 43.46a15 15 0 0 0 18 0l78.41-59.38c10.44-7.98 24.14 4.54 17.09 15.62z" 
+								class="fa-primary" />
+						</svg>
+					</span>
+					<span class="link-text">Contact</span>
+				</a>
+			</li>
+		</ul>
+    </nav>
+    
     <main>
-        <section id="main">
-            <h1 id="spec" class="glitch">Crazy_J<br><span>FlukeJessada</span></h1>
+        <section id="main" class="deb">
+            <h1 id="spec" class="glitch">LzyDev<br><span>FlukeJessada</span></h1>
             <p id="subhead">
                 I am 
-                <span class="typewrite" data-period="1000" 
-                data-type='[ "LAZY.", "Gamer.", "Creative.", "Developer." ]'></span>
+                <span class="typewrite" data-period="3000" 
+                data-type='["lazy.", "LZY."]'></span>
                 <span class="wrap"></span>
             </p>
             <div style="padding-top: 30px"></div>
             <div id="wrapper"><a href="/me" id="btn">See me more</a></div>
         </section>
-        <section id="nav">
-            <div>
-            <ul>
-                <li><a href="/game">
-                    <span><i class="fas fa-gamepad"></i></span>
-                    Game
-                </a></li>
-                <li><a href="/devblog">
-                    <span><i class="fab fa-dev"></i></span>
-                    DevBlog
-                </a></li>
-                <li><a href="https://github.com/flukejessada">
-                    <span><i class="fab fa-github-square"></i></span>
-                    GitHub
-                </a></li>
-                <li><a href="https://twitter.com/FlukeJessada">
-                    <span><i class="fab fa-twitter-square"></i></span>
-                    Twitter
-                </a></li>
-            </ul>
-            </div>
-        </section>
     </main>
     <!-- <p>Made with ❤️ by FlukeJessada</p> -->
+</body>
 </html>
