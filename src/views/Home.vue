@@ -3,7 +3,7 @@
     <img alt="LzyDev Logo" src="../assets/svg/lzy-logo.svg" />
     <h1>Hello, World!</h1>
     <p>
-      Sorry for the messed in here. Under contruction work.
+      Sorry for the messed in here. Under construction work.
     </p>
     <h4>Changelog</h4>
     <ul>
