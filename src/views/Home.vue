@@ -7,7 +7,14 @@
     </p>
     <h4>Changelog</h4>
     <ul>
-      <li>14-11-2020 11:10 - Binding projects list data from Github in Projects page</li>
+      <li>
+        14-11-2020 22:00 - Added live demo link in Projects page, Added Skill
+        set in About Me page.
+      </li>
+      <li>
+        14-11-2020 11:10 - Binding projects list data from Github in Projects
+        page
+      </li>
     </ul>
   </div>
 </template>

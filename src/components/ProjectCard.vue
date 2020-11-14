@@ -2,7 +2,11 @@
     <div class="project-card">
         <h3 class="title">{{ name }} <small>{{ language }}</small></h3>
         <p class="description">{{ description }}</p>
-        <a :href="html_url" target="_blank" rel="noopener noreferrer">more info</a>
+        <a :href="html_url" target="_blank" rel="noopener noreferrer">more info</a> 
+        <span v-if="homepage !== ''">
+             | 
+            <a :href="homepage" target="_blank" rel="noopener noreferrer">live demo</a>
+        </span>
     </div>
 </template>
 
@@ -14,6 +18,7 @@ export default {
         language: String,
         description: String,
         html_url: String,
+        homepage: String,
     }
 }
 </script>
