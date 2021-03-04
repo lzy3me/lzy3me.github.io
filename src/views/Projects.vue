@@ -2,7 +2,7 @@
   <div class="projects">
     <ul>
       <li v-for="data in projects" :key="data">
-        <project-card v-bind="data"/>
+        <project-card v-bind="data" />
       </li>
     </ul>
   </div>
@@ -10,43 +10,43 @@
 
 <script>
 import ProjectsService from "@/services/ProjectsService.js";
-import ProjectCard from '@/components/ProjectCard.vue';
+import ProjectCard from "@/components/ProjectCard.vue";
 
 export default {
   name: "projects",
   components: {
     ProjectCard
   },
-  data () {
+  data() {
     return {
-      githubRepos: [],
-    }
+      githubRepos: []
+    };
   },
-  mounted: function () {
-    let self = this
+  mounted: function() {
+    let self = this;
     async function getRepolist() {
       try {
-        const res = await ProjectsService.gettingReposList('lzy3me')
-        self.githubRepos = res.data
+        const res = await ProjectsService.gettingReposList("lzy3me");
+        self.githubRepos = res.data;
       } catch (err) {
-        console.error(err)
+        console.error(err);
       }
     }
-    getRepolist()
+    getRepolist();
   },
   computed: {
     projects() {
-      let self = this
-      let tempProjects = []
+      let self = this;
+      let tempProjects = [];
 
       self.githubRepos.forEach((item, index, arr) => {
         if (!arr[index].fork) {
-          tempProjects.push(item)
+          tempProjects.push(item);
         }
-      })
+      });
 
-      return tempProjects
+      return tempProjects;
     }
   }
-}
+};
 </script>
