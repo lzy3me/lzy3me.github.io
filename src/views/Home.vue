@@ -1,65 +1,8 @@
 <template>
   <div class="home">
-    <header class="nav-down responsive-nav hidden-lg hidden-md">
-      <button
-        type="button"
-        id="nav-toggle"
-        class="navbar-toggle"
-        data-toggle="collapse"
-        data-target="#main-nav"
-      >
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <!--/.navbar-header-->
-      <div id="main-nav" class="collapse navbar-collapse">
-        <nav>
-          <ul class="nav navbar-nav">
-            <li><a href="#top">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">About Me</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <div class="sidebar-navigation hidde-sm hidden-xs">
-      <nav>
-        <ul>
-          <li>
-            <a href="#top">
-              <span class="rect"></span>
-              <span class="circle"></span>
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#projects">
-              <span class="rect"></span>
-              <span class="circle"></span>
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="#contact">
-              <span class="rect"></span>
-              <span class="circle"></span>
-              About Me
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <ul class="social-icons">
-        <li>
-          <a href="#"><i class="fab fa-line"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-        </li>
-      </ul>
-    </div>
+    <!-- This is a Navbar for mobile device. Need to hide it for now until JS file completed. -->
+    <!-- <nav-component /> -->
+    <side-slider-nav />
 
     <div class="header-hero content-section" id="top">
       <div class="text-des">Hi, my name is</div>
@@ -75,50 +18,8 @@
         <div class="section-content">
           <div class="masonry">
             <div class="row">
-              <div class="item">
-                <div class="col-md-8">
-                  <a
-                    href="../assets/img/portfolio_big_1.jpg"
-                    data-lightbox="image"
-                    ><img src="../assets/img/portfolio_1.jpg" alt="image 1"
-                  /></a>
-                </div>
-              </div>
-              <div class="item second-item">
-                <div class="col-md-4">
-                  <a
-                    href="../assets/img/portfolio_big_2.jpg"
-                    data-lightbox="image"
-                    ><img src="../assets/img/portfolio_2.jpg" alt="image 2"
-                  /></a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="col-md-4">
-                  <a
-                    href="../assets/img/portfolio_big_3.jpg"
-                    data-lightbox="image"
-                    ><img src="../assets/img/portfolio_3.jpg" alt="image 3"
-                  /></a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="col-md-4">
-                  <a
-                    href="../assets/img/portfolio_big_4.jpg"
-                    data-lightbox="image"
-                    ><img src="../assets/img/portfolio_4.jpg" alt="image 4"
-                  /></a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="col-md-8">
-                  <a
-                    href="../assets/img/portfolio_big_5.jpg"
-                    data-lightbox="image"
-                    ><img src="../assets/img/portfolio_5.jpg" alt="image 5"
-                  /></a>
-                </div>
+              <div class="col-md-6" v-for="data in githubRepos" :key="data">
+                <project-card v-bind="data" />
               </div>
             </div>
           </div>
@@ -143,12 +44,37 @@
 </template>
 
 <script>
+import ProjectCard from "../components/ProjectCard.vue";
+import SideSliderNav from "../components/SideSliderNav.vue";
+// import NavComponent from '../components/NavComponent.vue';
+
 export default {
+  components: { SideSliderNav, ProjectCard },
   name: "Home",
   mounted: () => {
     window.addEventListener("scroll", () => {
       console.log("scrolled");
     });
+  },
+  data() {
+    return {
+      githubRepos: [
+        {
+          name: "Testing 01",
+          language: "JavaScript",
+          description: "Bra Bra Bra",
+          html_url: "https://lzy3me.github.io/",
+          homepage: "",
+        },
+        {
+          name: "Testing 02",
+          language: "Java",
+          description: "Bra Bra Bra",
+          html_url: "https://lzy3me.github.io/",
+          homepage: "",
+        },
+      ],
+    };
   },
 };
 </script>
