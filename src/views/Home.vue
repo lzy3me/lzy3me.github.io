@@ -51,11 +51,7 @@ import SideSliderNav from "../components/SideSliderNav.vue";
 export default {
   components: { SideSliderNav, ProjectCard },
   name: "Home",
-  mounted: () => {
-    window.addEventListener("scroll", () => {
-      console.log("scrolled");
-    });
-  },
+  mounted: () => {},
   data() {
     return {
       githubRepos: [
@@ -78,9 +74,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-img {
-  width: 200px;
-}
-</style>

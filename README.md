@@ -1,33 +1,25 @@
-# lzy3me.github.io
+# lzy3me.github.io 
 
-![github page](https://github.com/lzy3me/lzy3me.github.io/workflows/github%20page/badge.svg)
+![github page](https://img.shields.io/github/workflow/status/lzy3me/lzy3me.github.io/github%20page?style=for-the-badge) [![GitHub](https://img.shields.io/github/license/lzy3me/lzy3me.github.io?style=for-the-badge)](LICENSE) ![GitHub package.json version](https://img.shields.io/github/package-json/v/lzy3me/lzy3me.github.io?style=for-the-badge)
 
 My portfolio page. create on Vue.js with auto deployment (Actions)
 
 ## Project setup
 
 ```bash
+# Install dependencies from project
 npm install
-```
 
-### Compiles and hot-reloads for development
-
-```bash
+# Compiles and hot-reloads for development
 npm run serve
-```
 
-### Compiles and minifies for production
-
-```bash
+# Compiles and minifies for production
 npm run build
-```
 
-### Lints and fixes files
-
-```bash
+# Lints and fixes files
 npm run lint
 ```
 
-### Customize configuration
+## License
 
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[MIT](LICENSE)
