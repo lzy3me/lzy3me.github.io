@@ -2,6 +2,10 @@
   "name": "lzy3me.github.io",
   "version": "0.1.5",
   "private": true,
+  "author": {
+    "name": "Fluke@lzy3me",
+    "url": "https://lzy3me.github.io/"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -14,6 +18,7 @@
     "core-js": "^3.8.1",
     "slick-carousel": "^1.8.1",
     "vue": "^2.6.12",
+    "vue-apollo": "^3.0.0-beta.11",
     "vue-router": "^3.2.0"
   },
   "devDependencies": {
@@ -26,9 +31,11 @@
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.0",
     "eslint-plugin-vue": "^6.2.2",
+    "graphql-tag": "^2.9.0",
     "node-sass": "^4.12.0",
     "prettier": "^1.19.1",
     "sass-loader": "^8.0.2",
+    "vue-cli-plugin-apollo": "~0.22.2",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
@@ -51,9 +58,5 @@
     "last 2 versions",
     "not dead"
   ],
-  "license": "SEE LICENSE IN <LICENSE>",
-  "author": {
-    "name": "Fluke@lzy3me",
-    "url": "https://lzy3me.github.io/"
-  }
+  "license": "SEE LICENSE IN <LICENSE>"
 }

@@ -14,6 +14,7 @@
         <div class="section-heading">
           <h1>Recent<br /><em>Projects</em></h1>
           <p>All of my work on Github <br />Check it out.</p>
+          <h3>{{ data }}</h3>
         </div>
         <div class="section-content">
           <div class="masonry">
@@ -47,6 +48,7 @@
 import ProjectCard from "../components/ProjectCard.vue";
 import SideSliderNav from "../components/SideSliderNav.vue";
 // import NavComponent from '../components/NavComponent.vue';
+import { PullPinned } from "../services/PinnedRepos";
 
 export default {
   components: { SideSliderNav, ProjectCard },
@@ -70,7 +72,11 @@ export default {
           homepage: "",
         },
       ],
+      data: []
     };
+  },
+  apollo: {
+    data: PullPinned
   },
 };
 </script>
