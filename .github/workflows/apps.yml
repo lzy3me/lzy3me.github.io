@@ -1,0 +1,9 @@
+name: Deploy to gh-page
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
